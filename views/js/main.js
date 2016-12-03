@@ -123,8 +123,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var pizCls = 'mover';
   var mvingPizDiv = document.getElementById("movingPizzas1")
 
+  //1 row = 8 pizzas
+  var screenHeight = window.screen.height;
+
+  var rows = screenHeight / s;
+  var numPizzas = rows * cols;
+
   // i < 15 Reduced the number of pizzas on the page. 200 is overkill.
-  for (var i = 0; i < 15; i++) {
+  for (var i = 0; i < numPizzas; i++) {
     var elem = document.createElement('img');
     //Moved the static elements outside the loop and passed them as variables.
     elem.className = pizCls;
