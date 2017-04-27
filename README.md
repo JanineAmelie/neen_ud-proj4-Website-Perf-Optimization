@@ -2,13 +2,13 @@
 Website Optimization
 ---
 
-###Table of Contents
+### Table of Contents
 1. [Project Overview](#project-overview)
 2. [Project Information](#project-information)
 3. [Optimizations for Cam's Portfolio](#optimizations-for-cams-portfolio)
 4. Optimizations for Cam's Pizzeria
-  5. [Main.js](#js-optimizations-for-cams-pizzeria)
-  6.  [Styles.css](#css-optimizations-for-cams-pizzeria)
+->  5. [Main.js](#js-optimizations-for-cams-pizzeria)
+->  6.  [Styles.css](#css-optimizations-for-cams-pizzeria)
 7. [How to Run](#how-to-run)
   8. [Setting up a LocalHost server](#creating-a-localhost)
   9. [Creating a secure tunnel (url) to your LocalHost](#using-ngrok-for-a-secure-web-tunnel)
@@ -16,7 +16,7 @@ Website Optimization
 
 ---
 
-###Project-Overview
+### Project-Overview
 
 My task was to optimize a  website provided by [Udacity](http://udacity.com/)  with a number of optimization and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second to produce the most enjoyable user experience.
 
@@ -24,7 +24,7 @@ I utilized my knowledge of the Critical Rendering Path and used Chrome Developer
 
 ---
 
-###Project-Information
+### Project-Information
 
 - **Tools:**
   -  Google Developer Tools: Timeline.
@@ -42,7 +42,7 @@ I utilized my knowledge of the Critical Rendering Path and used Chrome Developer
 ---
 
 ### **Optimizations-for-Cams-Portfolio**
-###index.html
+### index.html
 
 **Before optimization:**
 *Google Page Speed Insights Scores:* Mobile 76, Desktop 89
@@ -52,7 +52,7 @@ I utilized my knowledge of the Critical Rendering Path and used Chrome Developer
 
 ![PSI Results](https://www.dropbox.com/s/6w1vtgmgvmi33zv/4_psi.gif?raw=1)
 
-####**Steps taken:**
+#### **Steps taken:**
 
 - Eliminated render-blocking JavaScript and CSS in above-the-fold content by adding async / defer and moving js scripts to the bottom. And Open Sans web fonts to the bottom.
 - Inlined the main style.css into the top of index.html and [minified it.](http://htmlcompressor.com/compressor/)
@@ -71,7 +71,7 @@ I utilized my knowledge of the Critical Rendering Path and used Chrome Developer
 ---
 
 ### **JS-Optimizations-for-Cams-Pizzeria**
-##(views/main.js)
+## (views/main.js)
 
 **!IMPORTANT!!:  All benchmarks were done with a clean install of google chrome canary in incognito mode. add-ons / extensions might affect performance benchmarks of any kind.**
 
@@ -96,11 +96,11 @@ I utilized my knowledge of the Critical Rendering Path and used Chrome Developer
 
 **Results:**
 
-####**✓ Time to resize pizzas is less than 5 ms using the pizza size slider:**
+#### **✓ Time to resize pizzas is less than 5 ms using the pizza size slider:**
 
 ![enter image description here](https://www.dropbox.com/s/tczag5dhuevmkv7/4_time-to-resize-pizzaslider.gif?raw=1)
 
-####**✓ Render with a consistent frame-rate at 60fps when scrolling.**
+#### **✓ Render with a consistent frame-rate at 60fps when scrolling.**
 
 ![Consistent Fps](https://www.dropbox.com/s/fvwbpscilfmd4os/4_15175527_10157868136920323_777205252_n.png?raw=1)
 ![Recording](https://www.dropbox.com/s/jrph8j5c1vhuybh/4_scroll-fps.gif?raw=1)
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 
 ### **CSS-Optimizations-for-Cams-Pizzeria**
-###views/css/style.css
+### views/css/style.css
 
 1. Minified bootstrap grid
 2. Added properites to the mover class in the css file to reduce repaint times, and place each element on its own layer.
@@ -301,7 +301,7 @@ See tutorial here at [developers.google.com](https://developers.google.com/web/t
 
 ----
 
-####**Creating-a-LocalHost**
+#### **Creating-a-LocalHost**
 Create a web server using your favorite method or if you don't know how, an easy way is to use XAMPP or Python's simpleserver
 
 ##### **Using XAMPP **
@@ -319,7 +319,7 @@ or
   $> python -m http.server 8080  (if python version = 3)
 ```
 
-####**Using-Ngrok-for-a-secure-web-tunnel**
+#### **Using-Ngrok-for-a-secure-web-tunnel**
 1. go to [ngrok](https://ngrok.com/download) and download.
 2. Navigate to your project folder:
 ```bash
